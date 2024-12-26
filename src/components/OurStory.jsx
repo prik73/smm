@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Card, CardContent } from "@/components/ui/card";
+import story from '../assets/images/story.jpg'
 
 const OurStory = () => {
   const containerVariants = {
@@ -35,8 +36,8 @@ const OurStory = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Story</h2>
             <div className="w-20 h-1 bg-blue-600 mb-6"></div>
             <p className="text-lg text-gray-600 max-w-2xl">
-              A journey of passion, dedication, and continuous growth towards excellence in every 
-              step we take.
+              A journey dedicated to spreading legal awareness and education, with a special focus on 
+              empowering women, children, senior citizens, and specially abled persons.
             </p>
           </motion.div>
           
@@ -45,10 +46,10 @@ const OurStory = () => {
             className="grid grid-cols-2 gap-4"
           >
             {[
-              { number: "5+", label: "Years" },
-              { number: "200+", label: "Members" },
-              { number: "50+", label: "Events" },
-              { number: "100%", label: "Satisfaction" }
+              { number: "2024", label: "Established" },
+              { number: "4", label: "Focus Groups" },
+              { number: "100%", label: "Dedication" },
+              { number: "1", label: "Mission" }
             ].map((stat, index) => (
               <Card key={index} className="bg-white/50 backdrop-blur">
                 <CardContent className="p-4 text-center">
@@ -78,7 +79,7 @@ const OurStory = () => {
             className="relative h-[500px] rounded-2xl overflow-hidden"
           >
             <img 
-              src="/api/placeholder/600/500"
+              src={story}
               alt="Our Story" 
               className="w-full h-full object-cover"
             />
@@ -95,16 +96,16 @@ const OurStory = () => {
           >
             {[
               {
-                title: "Our Beginning",
-                content: "Founded with a vision to create meaningful impact, we started our journey with unwavering determination and a clear purpose."
+                title: "Our Foundation",
+                content: "Sarvodaya Manav se Manavta Foundation (SMM Foundation) is a non-profit company registered under section 8 of Companies Act, 2013. Established in 2024, we are headquartered in Gurugram, Haryana, with a vision to serve humanity."
               },
               {
                 title: "Our Mission",
-                content: "We strive to innovate and excel in everything we do, putting our community and values at the forefront of every decision."
+                content: "Our primary mission is to spread legal awareness and education throughout India. We focus specifically on laws related to women, children, senior citizens, and specially abled persons, ensuring their rights are understood and protected."
               },
               {
-                title: "Our Future",
-                content: "Looking ahead, we're committed to growing sustainably while maintaining the core values that define us."
+                title: "Our Impact",
+                content: "Working tirelessly for the welfare of humankind, we strive to create a society where legal knowledge empowers every individual, particularly those from vulnerable sections of our community."
               }
             ].map((item, index) => (
               <motion.div key={index} variants={itemVariants}>

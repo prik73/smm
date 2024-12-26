@@ -10,7 +10,7 @@ function Home() {
       <Hero />
       <OurStory />
       <WhatWeDo />
-      {/* <Videos /> */}
+      <Videos />
       <MapSection />
     </div>
   );
