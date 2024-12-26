@@ -5,6 +5,7 @@ import About from './pages/About';
 import Contribute from './pages/Contribute';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import { Analytics } from "@vercel/analytics/react"
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
 
   return (
     <div>
+      <Analytics />
       <header>
         <Navbar />
       </header>
