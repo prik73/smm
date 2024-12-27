@@ -21,7 +21,7 @@ const Navbar = () => {
     { to: '/about', text: 'About' },
     { to: '/contribute', text: 'Contribute' },
     { to: '/events', text: 'Events' },
-    { to: '/contact', text: 'Contact' },
+    { to: '/contact', text: 'Contact-Us' },
     { to: '/gallery', text: 'Gallery' }
   ];
 
