@@ -1,16 +1,16 @@
 const Videos = () => {
   const videos = [
     {
-      title: "Empowering Communities",
-      url: "https://www.youtube.com/embed/dQw4w9WgXcQ", // Correct embed URL
+      title: "Right to Property",
+      url: "https://www.youtube.com/embed/k_V6dAuwmtg", // Correct embed URL
     },
     {
-      title: "Health Camp Highlights",
-      url: "https://www.youtube.com/embed/abc12345678", // Replace with actual video ID
+      title: "Domestic Violence",
+      url: "https://www.youtube.com/embed/mQROk2iSmEk", // Correct embed URL
     },
     {
-      title: "Legal Awareness in Action",
-      url: "https://www.youtube.com/embed/xyz98765432", // Replace with actual video ID
+      title: "Sexual Harrasement at Workplace",
+      url: "https://www.youtube.com/embed/Hd_B7YOCmYQ", // Correct embed URL
     },
   ];
 

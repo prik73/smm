@@ -1,29 +1,9 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { 
-  Heart,
-  Handshake,VideoIcon, BookOpen,CalendarDays, MessageCircle,
-  CircleDollarSign,
-  School,
-  Shield,
-  Users2,
-  Banknote,
-  Camera,
-  Edit,
-  Users,
-  ChevronRight,
-  X,
-  Copy
-} from "lucide-react";
+import {Heart,Handshake,VideoIcon, BookOpen,CalendarDays, MessageCircle,CircleDollarSign,School,Shield,Users2,Banknote,Camera,Edit,Users,ChevronRight,X,Copy} from "lucide-react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogClose,
-} from "@/components/ui/dialog";
+import {Dialog,DialogContent,DialogHeader,DialogTitle,DialogClose} from "@/components/ui/dialog";
 import { useToast } from "../hooks/use-toast";
 import { Separator } from "@/components/ui/separator"
 import QR from "../assets/images/qr.jpg"
@@ -43,7 +23,7 @@ const Contribute = () => {
   return (
     <section className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       {/* Hero Section */}
-      <div className="relative h-[50vh] overflow-hidden">
+      <div className="relative h-[50vh] overflow-hidden mt-[110px]">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600">
           <motion.div 
             className="absolute inset-0 bg-[url('/api/placeholder/1920/1080')] bg-cover bg-center"
@@ -286,67 +266,74 @@ const Contribute = () => {
         </div>
       </div>
       {/* Donation Modal */}
-      <Dialog open={isDonateModalOpen} onOpenChange={setIsDonateModalOpen}>
-        <DialogContent className="sm:max-w-[900px]">
-          <DialogHeader>
-            <DialogTitle className="text-2xl font-bold">Make a Donation</DialogTitle>
-            <DialogClose className="absolute right-4 top-4 opacity-70 hover:opacity-100">
-              {/* <X className="w-4 h-4" /> */}
-            </DialogClose>
-          </DialogHeader>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6">
-            {/* Bank Details */}
-            <Card className="border-0 shadow-lg">
-              <CardHeader>
-                <h3 className="text-xl font-semibold">Bank Transfer</h3>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-4">
-                  {[
-                    { label: "Account Name", value: "Sarvodaya Manav Foundation" },
-                    { label: "Bank Name", value: "IDBI Bank" },
-                    { label: "Account Number", value: "2252102000000082" },
-                    { label: "IFSC Code", value: "IBKL0002252" }
-                  ].map((detail, index) => (
-                    <div key={index} className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
-                      <div>
-                        <p className="text-sm text-gray-500">{detail.label}</p>
-                        <p className="font-medium">{detail.value}</p>
-                      </div>
-                      <Button
-                        variant="ghost"
-                        size="sm"
-                        onClick={() => copyToClipboard(detail.value)}
-                      >
-                        <Copy className="w-4 h-4" />
-                      </Button>
-                    </div>
-                  ))}
+      {/* Donation Modal */}
+<Dialog open={isDonateModalOpen} onOpenChange={setIsDonateModalOpen}>
+  <DialogContent className="sm:max-w-[900px] w-[95%] max-h-[90vh] overflow-y-auto p-4 sm:p-6">
+    <DialogHeader className="space-y-2">
+      <DialogTitle className="text-xl sm:text-2xl font-bold text-center sm:text-left">
+        Make a Donation
+      </DialogTitle>
+      <DialogClose className="absolute right-2 sm:right-4 top-2 sm:top-4 opacity-70 hover:opacity-100">
+        {/* <X className="w-4 h-4" /> */}
+      </DialogClose>
+    </DialogHeader>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8 mt-4 sm:mt-6">
+      {/* Bank Details */}
+      <Card className="border-0 shadow-lg">
+        <CardHeader className="p-4 sm:p-6">
+          <h3 className="text-lg sm:text-xl font-semibold">Bank Transfer</h3>
+        </CardHeader>
+        <CardContent className="p-4 sm:p-6 pt-0 sm:pt-0">
+          <div className="space-y-3 sm:space-y-4">
+            {[
+              { label: "Account Name", value: "Sarvodaya Manav Foundation" },
+              { label: "Bank Name", value: "IDBI Bank" },
+              { label: "Account Number", value: "2252102000000082" },
+              { label: "IFSC Code", value: "IBKL0002252" }
+            ].map((detail, index) => (
+              <div 
+                key={index} 
+                className="flex flex-col sm:flex-row sm:justify-between sm:items-center p-2 sm:p-3 bg-gray-50 rounded-lg space-y-2 sm:space-y-0"
+              >
+                <div className="flex-grow">
+                  <p className="text-xs sm:text-sm text-gray-500">{detail.label}</p>
+                  <p className="text-sm sm:text-base font-medium break-all">{detail.value}</p>
                 </div>
-              </CardContent>
-            </Card>
-
-            {/* UPI QR Code */}
-            <Card className="border-0 shadow-lg">
-              <CardHeader>
-                <h3 className="text-xl font-semibold">UPI Payment</h3>
-              </CardHeader>
-              <CardContent className="flex flex-col items-center">
-                <div className="bg-white p-4 rounded-xl shadow-inner mb-4">
-                  <img
-                    src={QR}
-                    alt="UPI QR Code"
-                    className="w-48 h-48 object-contain"
-                  />
-                </div>
-                <p className="text-center text-gray-600">
-                  Scan this QR code with any UPI app to make a donation
-                </p>
-              </CardContent>
-            </Card>
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={() => copyToClipboard(detail.value)}
+                  className="ml-auto sm:ml-4"
+                >
+                  <Copy className="w-3 h-3 sm:w-4 sm:h-4" />
+                </Button>
+              </div>
+            ))}
           </div>
-        </DialogContent>
-      </Dialog>
+        </CardContent>
+      </Card>
+
+      {/* UPI QR Code */}
+      <Card className="border-0 shadow-lg">
+        <CardHeader className="p-4 sm:p-6">
+          <h3 className="text-lg sm:text-xl font-semibold">UPI Payment</h3>
+        </CardHeader>
+        <CardContent className="flex flex-col items-center p-4 sm:p-6 pt-0 sm:pt-0">
+          <div className="bg-white p-3 sm:p-4 rounded-xl shadow-inner mb-3 sm:mb-4">
+            <img
+              src={QR}
+              alt="UPI QR Code"
+              className="w-36 h-36 sm:w-48 sm:h-48 object-contain"
+            />
+          </div>
+          <p className="text-center text-sm sm:text-base text-gray-600">
+            Scan this QR code with any UPI app to make a donation
+          </p>
+        </CardContent>
+      </Card>
+    </div>
+  </DialogContent>
+</Dialog>
     </section>
   );
 };

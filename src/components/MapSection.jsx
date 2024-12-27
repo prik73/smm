@@ -63,7 +63,7 @@ const MapSection = () => {
               </div>
               <div className="ml-4">
                 <h3 className="text-lg font-semibold text-gray-900">Email</h3>
-                <p className="text-gray-600 mt-1">contact@ngo.org</p>
+                <p className="text-gray-600 mt-1">princy@smmfoundation.org.in</p>
               </div>
             </div>
 
@@ -73,7 +73,7 @@ const MapSection = () => {
               </div>
               <div className="ml-4">
                 <h3 className="text-lg font-semibold text-gray-900">Phone</h3>
-                <p className="text-gray-600 mt-1">+91 98765 43210</p>
+                <p className="text-gray-600 mt-1">tel: +91 8860009103</p>
               </div>
             </div>
           </motion.div>

@@ -141,7 +141,7 @@ const Gallery = () => {
     };
   
     return (
-      <section className="bg-gray-50 py-16">
+      <section className="bg-gray-50 py-16 mt-[110px]">
         <div className="container mx-auto px-6">
           {/* Section Header */}
           <motion.div

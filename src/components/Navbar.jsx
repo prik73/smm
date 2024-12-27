@@ -137,13 +137,13 @@ const Navbar = () => {
         <AnimatePresence>
           {isOpen && (
             <motion.div
-              className="md:hidden fixed inset-x-0 top-[110px] bg-white/95 backdrop-blur-sm shadow-lg h-[50vh]"
+              className="md:hidden fixed inset-x-0 top-[110px] bg-white/95 backdrop-blur-sm shadow-lg h-[55vh]"
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.2 }}
             >
-              <div className="px-4 pt-6 pb-8 space-y-6">
+              <div className="px-4 pt-6 pb-8 space-y-6 flex flex-col items-center justify-center w-full">
                 {navLinks.map(({ to, text }, index) => (
                   <motion.div
                     key={to}
@@ -156,7 +156,7 @@ const Navbar = () => {
                       className="block text-2xl text-stone-800 hover:text-blue-800 transition-colors duration-300 relative group py-2"
                       onClick={() => setIsOpen(false)}
                     >
-                      <span className="relative z-10">{text}</span>
+                      <span className="relative z-10 text-center">{text}</span>
                       <span className="absolute bottom-0 left-0 w-full h-0.5 bg-blue-800 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"/>
                     </Link>
                   </motion.div>

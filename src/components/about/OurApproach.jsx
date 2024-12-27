@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Handshake, BookOpen, Heart } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const OurApproach = () => {
   return (
@@ -84,9 +85,12 @@ const OurApproach = () => {
             Our mission is to create a world where everyone has the opportunity
             to thrive and achieve their fullest potential.
           </p>
-          <button className="px-6 py-3 bg-blue-600 text-white rounded-lg shadow-lg hover:bg-blue-700 transition duration-200">
-            Join Our Mission
-          </button>
+          <Link 
+            to="/contribute" 
+             className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg shadow-lg hover:bg-blue-700 transition duration-200"
+          >
+             Join Our Mission
+          </Link>
         </motion.div>
       </div>
     </section>

@@ -1,14 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Clock, 
-  Heart,
-  Send,
-  Loader2
-} from "lucide-react";
+import { Mail, Phone, MapPin, Clock, Heart, Send, Loader2 } from "lucide-react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -23,7 +15,6 @@ const ContactUs = () => {
     e.preventDefault();
     setIsLoading(true);
     
-    // Simulate form submission
     setTimeout(() => {
       setIsLoading(false);
       toast({
@@ -36,7 +27,7 @@ const ContactUs = () => {
   return (
     <section className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       {/* Hero Section */}
-      <div className="relative h-[50vh] overflow-hidden">
+      <div className="relative h-[40vh] sm:h-[45vh] md:h-[50vh] overflow-hidden mt-[110px]">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600">
           <motion.div 
             className="absolute inset-0 bg-[url('/api/placeholder/1920/1080')] bg-cover bg-center"
@@ -53,28 +44,27 @@ const ContactUs = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl md:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-white/80">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-white/80">
               We're Here to Help
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 leading-relaxed">
+            <p className="text-lg sm:text-xl md:text-2xl text-white/90 leading-relaxed px-4">
               Whether you're looking to contribute, share feedback, or seek help,
               we're always ready to listen. Together, we can build a better, brighter future.
             </p>
           </motion.div>
         </div>
         
-        {/* Decorative Elements */}
         <motion.div 
-          className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-gray-50 to-transparent"
+          className="absolute bottom-0 left-0 right-0 h-20 sm:h-24 md:h-32 bg-gradient-to-t from-gray-50 to-transparent"
           initial={{ opacity: 0.5 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 4.8 }}
+          transition={{ delay: 0.8 }}
         />
       </div>
 
       {/* Contact Section */}
-      <div className="container mx-auto px-20 -mt-[90px] pb-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-20 -mt-[60px] sm:-mt-[70px] md:-mt-[90px] pb-10 sm:pb-16 md:pb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
           {/* Contact Details */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -83,40 +73,40 @@ const ContactUs = () => {
             transition={{ duration: 0.5 }}
           >
             <Card className="bg-white/80 backdrop-blur-sm shadow-xl border-0 h-full">
-              <CardHeader className="p-8 pb-6">
-                <h2 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
+              <CardHeader className="p-6 sm:p-8 pb-4 sm:pb-6">
+                <h2 className="text-2xl sm:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
                   Reach Out to Us
                 </h2>
-                <p className="text-gray-600 mt-2 text-lg">
+                <p className="text-gray-600 mt-2 text-base sm:text-lg">
                   Contact us to contribute, ask questions, or seek assistance. 
                   We are here to support you.
                 </p>
               </CardHeader>
-              <CardContent className="p-8 pt-4 space-y-0">
+              <CardContent className="p-6 sm:p-8 pt-4 space-y-2 sm:space-y-0">
                 {[
-                  { icon: <MapPin className="w-6 h-6" />, color: "blue", 
+                  { icon: <MapPin className="w-5 h-5 sm:w-6 sm:h-6" />, color: "blue", 
                     content: "A1-203, Mapsko Casa Bella, Sector 82, Gurugram, Haryana, 122002" },
-                  { icon: <Phone className="w-6 h-6" />, color: "green", 
+                  { icon: <Phone className="w-5 h-5 sm:w-6 sm:h-6" />, color: "green", 
                     content: "+91 8860009103" },
-                  { icon: <Mail className="w-6 h-6" />, color: "red", 
+                  { icon: <Mail className="w-5 h-5 sm:w-6 sm:h-6" />, color: "red", 
                     content: "princy@smmfoundation.org.in" },
-                  { icon: <Clock className="w-6 h-6" />, color: "yellow", 
+                  { icon: <Clock className="w-5 h-5 sm:w-6 sm:h-6" />, color: "yellow", 
                     content: "Mon-Fri, 9 AM - 5 PM" },
-                  { icon: <Heart className="w-6 h-6" />, color: "pink", 
+                  { icon: <Heart className="w-5 h-5 sm:w-6 sm:h-6" />, color: "pink", 
                     content: "Thank you for your contributions and support!" }
                 ].map((item, index) => (
                   <motion.div 
                     key={index}
-                    className="flex items-center gap-4 p-4 rounded-xl hover:bg-gray-50 transition-colors duration-200"
+                    className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl hover:bg-gray-50 transition-colors duration-200"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1 }}
                   >
-                    <div className={`p-3 bg-${item.color}-100 text-${item.color}-500 rounded-xl`}>
+                    <div className={`p-2 sm:p-3 bg-${item.color}-100 text-${item.color}-500 rounded-xl`}>
                       {item.icon}
                     </div>
-                    <p className="text-gray-700">{item.content}</p>
+                    <p className="text-sm sm:text-base text-gray-700">{item.content}</p>
                   </motion.div>
                 ))}
               </CardContent>
@@ -131,16 +121,16 @@ const ContactUs = () => {
             transition={{ duration: 0.5 }}
           >
             <Card className="bg-white/80 backdrop-blur-sm shadow-xl border-0">
-              <CardHeader className="p-8 pb-6">
-                <h2 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
+              <CardHeader className="p-6 sm:p-8 pb-4 sm:pb-6">
+                <h2 className="text-2xl sm:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
                   Send Us a Message
                 </h2>
-                <p className="text-gray-600 mt-2 text-lg">
+                <p className="text-gray-600 mt-2 text-base sm:text-lg">
                   Fill out the form below, and we'll get back to you as soon as possible.
                 </p>
               </CardHeader>
-              <CardContent className="p-8 pt-4">
-                <form onSubmit={handleSubmit} className="space-y-6">
+              <CardContent className="p-6 sm:p-8 pt-4">
+                <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
                   <div className="space-y-2">
                     <label className="text-sm font-medium text-gray-700">
                       Your Name
@@ -150,7 +140,7 @@ const ContactUs = () => {
                       className="bg-white/50"
                     />
                   </div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                     <div className="space-y-2">
                       <label className="text-sm font-medium text-gray-700">
                         Email Address
@@ -178,7 +168,7 @@ const ContactUs = () => {
                     </label>
                     <Textarea 
                       placeholder="Type your message here"
-                      className="min-h-[150px] bg-white/50"
+                      className="min-h-[120px] sm:min-h-[150px] bg-white/50"
                     />
                   </div>
                   <Button 
