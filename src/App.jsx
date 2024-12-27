@@ -15,7 +15,7 @@ function App() {
  
 
   return (
-    <div>
+    <div className="relative w-full overflow-x-hidden">
       <Analytics />
       <header>
         <Navbar />

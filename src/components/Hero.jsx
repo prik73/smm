@@ -13,13 +13,13 @@ const Hero = () => {
   const slides = [
     {
       image: im1,
-      title: 'Slide 1',
-      description: 'Description 1'
+      title: 'Building a Brighter Future Together',
+      description: 'Join us in our mission to bring about social change in the world.'
     },
     {
       image: im2,
-      title: 'Slide 2',
-      description: 'Description 2'
+      title: 'Building a Brighter Future Together',
+      description: 'Join us in our mission to bring about social change in the world'
     }
     // Add more slides
   ];
