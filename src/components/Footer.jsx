@@ -48,7 +48,7 @@ const Footer = () => {
             <HoverCardContent className="p-3 bg-gray-800 text-gray-200 rounded-md shadow-lg w-40">
               <div className="flex flex-col items-start space-y-2">
                 <a
-                  href="mailto:priyanshu@example.com"
+                  href="mailto:prinovac@gmail.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center space-x-2 hover:text-white"
@@ -57,7 +57,7 @@ const Footer = () => {
                   <span>Email</span>
                 </a>
                 <a
-                  href="https://github.com/priyanshu"
+                  href="https://github.com/prik73/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center space-x-2 hover:text-white"
@@ -76,7 +76,7 @@ const Footer = () => {
             <HoverCardContent className="p-3 bg-gray-800 text-gray-200 rounded-md shadow-lg w-40">
               <div className="flex flex-col items-start space-y-2">
                 <a
-                  href="mailto:saarthak@example.com"
+                  href="mailto:saarthakagarwal0408@gmail.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center space-x-2 hover:text-white"
@@ -85,7 +85,7 @@ const Footer = () => {
                   <span>Email</span>
                 </a>
                 <a
-                  href="https://github.com/saarthak"
+                  href="https://github.com/Saarthak1234"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center space-x-2 hover:text-white"

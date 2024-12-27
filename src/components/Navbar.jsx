@@ -84,8 +84,8 @@ const Navbar = () => {
             </AnimatePresence>
           </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
+          {/* Desktop & Tablet Navigation */}
+          <div className="hidden sm:flex md:flex-wrap space-x-4 md:space-x-6">
             {navLinks.map(({ to, text }) => (
               <Link
                 key={to}
@@ -99,7 +99,7 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden">
+          <div className="sm:hidden">
             <Button
               variant="ghost"
               size="icon"
@@ -137,7 +137,7 @@ const Navbar = () => {
         <AnimatePresence>
           {isOpen && (
             <motion.div
-              className="md:hidden fixed inset-x-0 top-[110px] bg-white/95 backdrop-blur-sm shadow-lg h-[55vh]"
+              className="sm:hidden fixed inset-x-0 top-[110px] bg-white/95 backdrop-blur-sm shadow-lg h-[55vh]"
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}

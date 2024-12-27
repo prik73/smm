@@ -46,10 +46,10 @@ const OurStory = () => {
             className="grid grid-cols-2 gap-4"
           >
             {[
-              { number: "2024", label: "Established" },
-              { number: "4", label: "Focus Groups" },
-              { number: "100%", label: "Dedication" },
-              { number: "1", label: "Mission" }
+              { number: "40", label: "months of ground work" },
+              { number: "30+", label: "Seminars" },
+              { number: "1000+", label: "people affected" },
+              { number: "1", label: "Mission"}
             ].map((stat, index) => (
               <Card key={index} className="bg-white/50 backdrop-blur">
                 <CardContent className="p-4 text-center">

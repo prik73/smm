@@ -1,19 +1,17 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { 
-  Calendar, 
-  MapPin, 
-  Clock, 
-  Users, 
-  X, 
-  ChevronRight, 
-  Heart,
-  Share2,
-  Image as ImageIcon
-} from "lucide-react";
+import {Calendar,MapPin,Clock,Users,X,ChevronRight,Heart,Share2,Image as ImageIcon} from "lucide-react";
 import { Card, CardHeader, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+
+import im1 from "../assets/images/three.jpg"
+import im2 from "../assets/images/sch.jpg"
+import im3 from "../assets/images/talk.jpg"
+import im4 from "../assets/images/30.jpg"
+
+import im5 from "../assets/images/29.jpg"
+
 
 const events = [
   {
@@ -21,7 +19,7 @@ const events = [
     title: "Community Health Camp",
     subtitle: "Providing free health check-ups to underserved communities.",
     category: "Healthcare",
-    image: "/api/placeholder/800/400",
+    image: im1,
     gallery: [
       "/api/placeholder/800/400",
       "/api/placeholder/800/400",
@@ -39,10 +37,10 @@ const events = [
     title: "Legal Awareness Workshop",
     subtitle: "Empowering individuals by spreading legal knowledge and awareness.",
     category: "Education",
-    image: "/api/placeholder/800/400",
+    image: im2,
     gallery: [
-      "/api/placeholder/800/400",
-      "/api/placeholder/800/400",
+      im4,
+      im5,
       "/api/placeholder/800/400"
     ],
     description: "Attend this workshop to learn about your legal rights and how to exercise them. Topics include consumer rights, gender justice, and more.",
@@ -57,7 +55,7 @@ const events = [
     title: "Education for All",
     subtitle: "Workshops to bridge educational gaps and empower young minds.",
     category: "Education",
-    image: "/api/placeholder/800/400",
+    image: im3,
     gallery: [
       "/api/placeholder/800/400",
       "/api/placeholder/800/400",
