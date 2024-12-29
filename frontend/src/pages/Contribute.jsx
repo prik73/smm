@@ -78,6 +78,7 @@ const Contribute = () => {
                 <Button 
                   className="bg-blue-600 hover:bg-blue-700 text-white"
                   size="lg"
+                  onClick={() => window.open('https://forms.gle/j5jYCfrrjAi1WVx89', '_blank')}
                 >
                   Join as Volunteer
                   <ChevronRight className="w-4 h-4 ml-2" />
@@ -254,7 +255,8 @@ const Contribute = () => {
                   </p>
                   <Button 
         className="bg-gradient-to-r from-green-600 to-teal-600 text-white mt-5"
-        onClick={() => setIsVolunteerModalOpen(true)}
+        onClick={() => window.open('https://forms.gle/j5jYCfrrjAi1WVx89', '_blank')}
+        
       >
         <Handshake className="w-4 h-4 mr-2" />
         Become a Volunteer
