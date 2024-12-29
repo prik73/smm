@@ -10,10 +10,18 @@ import { useToast } from "../hooks/use-toast";
 const ContactUs = () => {
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
+  
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    message: ''
+  });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
+    
     
     setTimeout(() => {
       setIsLoading(false);

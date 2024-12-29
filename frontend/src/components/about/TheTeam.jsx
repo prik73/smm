@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-import i1 from "../../assets/images/team/5.jpg"
+import i1 from "../../assets/images/team/ten.jpg"
 import i2 from "../../assets/images/team/1.jpg"
 import i3 from "../../assets/images/team/2.jpg"
 import i4 from "../../assets/images/team/3.jpg"
