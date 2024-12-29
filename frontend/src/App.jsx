@@ -12,10 +12,13 @@ import Gallery from './pages/Gallery';
 import { Phone, MessageSquare } from 'lucide-react';
 import { motion } from 'framer-motion';
 
+import { ToastProvider } from "./components/ui/toast";
+
 function App() {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
+    <ToastProvider>
     <div className="relative w-full overflow-x-hidden">
       <Analytics />
       <header>
@@ -83,6 +86,7 @@ function App() {
         </div>
       </div>
     </div>
+    </ToastProvider>
   );
 }
 
