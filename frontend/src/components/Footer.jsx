@@ -1,4 +1,4 @@
-import { Instagram, Facebook, Youtube, Mail, Github } from "lucide-react";
+import { Instagram, Facebook, Youtube, Mail, Github, Linkedin } from "lucide-react";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
 
 const Footer = () => {
@@ -8,7 +8,7 @@ const Footer = () => {
         {/* Social Media Buttons */}
         <div className="flex justify-center space-x-4 mb-4">
           <a
-            href="https://www.instagram.com"
+            href="https://www.instagram.com/p/DCyfSV_PbBt/"
             target="_blank"
             rel="noopener noreferrer"
             className="p-2 bg-gray-800 rounded-full hover:bg-gray-700 transition duration-200"
@@ -17,7 +17,7 @@ const Footer = () => {
             <Instagram className="w-5 h-5 text-white" />
           </a>
           <a
-            href="https://www.facebook.com"
+            href="https://www.facebook.com/photo.php?fbid=122151557258268926&id=61558067799297&set=a.122112407810268926"
             target="_blank"
             rel="noopener noreferrer"
             className="p-2 bg-gray-800 rounded-full hover:bg-gray-700 transition duration-200"
@@ -26,13 +26,13 @@ const Footer = () => {
             <Facebook className="w-5 h-5 text-white" />
           </a>
           <a
-            href="https://www.youtube.com"
+            href="https://www.linkedin.com/in/sarvodaya-manav-se-manavta-foundation-909990313?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
             target="_blank"
             rel="noopener noreferrer"
             className="p-2 bg-gray-800 rounded-full hover:bg-gray-700 transition duration-200"
-            aria-label="YouTube"
+            aria-label="Linkedin"
           >
-            <Youtube className="w-5 h-5 text-white" />
+            <Linkedin className="w-5 h-5 text-white" />
           </a>
         </div>
 
